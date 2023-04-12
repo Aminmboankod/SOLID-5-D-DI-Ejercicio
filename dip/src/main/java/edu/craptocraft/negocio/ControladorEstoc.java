@@ -1,12 +1,12 @@
 package edu.craptocraft.negocio;
 
-import edu.craptocraft.bbdd.InventarioBBDD;
+import edu.craptocraft.bbdd.Stock;
 
-public class ControladorEstoc {
+public class ControladorEstoc implements Negocio {
 
-	private final InventarioBBDD inventario;
+	private final Stock inventario;
 
-	public ControladorEstoc(InventarioBBDD inventario) {
+	public ControladorEstoc(Stock inventario) {
 		this.inventario = inventario;
 	}
 
@@ -18,6 +18,7 @@ public class ControladorEstoc {
 	 * p.e: necesitamos al menos 400 mesas (mesa : 4 letras) y
 	 * al menos 700 lamparas (lampara: 7 letras)
 	 */
+	@Override
 	public boolean necesitaReponer(String tienda, String producto) {
 		int cantidadActual = inventario.numeroProductos(tienda, producto);
 

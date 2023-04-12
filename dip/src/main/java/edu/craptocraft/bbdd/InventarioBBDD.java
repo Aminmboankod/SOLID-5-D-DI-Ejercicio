@@ -1,6 +1,6 @@
 package edu.craptocraft.bbdd;
 
-public class InventarioBBDD {
+public class InventarioBBDD implements Stock {
 
 	// Metodo de consulta a la base de datos
 
